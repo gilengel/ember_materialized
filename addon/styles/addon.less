@@ -1,0 +1,401 @@
+/** YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY */
+
+@dark-primary: #1976D2;
+@primary: #2196F3;
+@light-primary: #B2EBF2;
+@text: #FFFFFF;
+@accent: #FFC107;
+
+
+@text-color: rgba(0, 0, 0, 0.87);
+@secondary-text-color: rgba(0, 0, 0, 0.54);
+@disabled-text-color: rgba(0, 0, 0, 0.26);
+@dividers-color: rgba(0, 0, 0, 0.12);
+
+@status-bar: #E0E0E0;
+@app-bar: #FFFFFF; //#F5F5F5;
+@app-bar-height: 36px;
+@background: rgb(233, 233, 233);
+@cards-dialogs: #FFFFFF;
+
+@min-button-width: 88px;
+@menu-width-desktop: 64px;
+@menu-width: @menu-width-desktop * 5;
+
+@disabled-text-color: rgba(0, 0, 0, .26);
+@flat-hover: rgba(153, 153, 153, 0.2);
+
+@blue-500: rgba(33, 150, 243, 1);
+
+@grey-50: #FAFAFA;
+@grey-100: #F5F5F5;
+@grey-200: #EEEEEE;
+@grey-300: #E0E0E0;
+@grey-400: #BDBDBD;
+@grey-500: #9E9E9E;
+@grey-600: #757575;
+@grey-700: #616161;
+@grey-800: #424242;
+@grey-900: #212121;
+
+@light-blue-50: #E1F5FE;
+@light-blue-100: #B3E5FC;
+@light-blue-200: #81D4FA;
+@light-blue-300: #4FC3F7;
+@light-blue-400: #29B6F6;
+@light-blue-500: #03A9F4;
+@light-blue-600: #039BE5;
+@light-blue-700: #0288D1;
+@light-blue-800: #0277BD;
+@light-blue-900: #01579B;
+@light-blue-a100: #80D8FF;
+@light-blue-a200: #40C4FF;
+@light-blue-a400: #00B0FF;
+@light-blue-a700: #0091EA;
+
+
+
+
+
+@swatch-500: @blue-500;
+
+
+
+@active-icon: rgba(0, 0, 0, 0.54);
+@inactive-icon: rgba(0, 0, 0, 0.26);
+
+
+
+.font-display-4 {
+    font-size: 112px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.font-display-3 {
+    font-size: 56px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.font-display-2 {
+    font-size: 45px;
+    line-height: 48px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.font-display-1 {
+    font-size: 34px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.font-headline {
+    font-size: 24px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.font-title {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.font-subhead-1 {
+
+    font-size: 15px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.font-subhead-2 {
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.font-body-1 {
+    font-size: 13px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.font-body-2 {
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.font-caption {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+
+
+
+
+/**
+ *  MATERIAL SLIDER
+ *
+ *
+ */
+ @slider-knob-width: 12px;
+ @slider-know-selected-width: 22px;
+.ma-slider{
+    background: @grey-300;
+    height: 30px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 4px;
+
+
+   .ma-control{
+       position: relative;
+        border-radius: @slider-knob-width;
+        border: 2px solid @swatch-500;
+
+        background: @swatch-500;
+        z-index: +1;
+   }
+   .normal{
+        left: -6px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .hover{
+        left:   @slider-know-selected-width / 2;
+        width:  @slider-know-selected-width;
+        height:  @slider-know-selected-width;
+
+        margin-left: -3px;
+    }
+}
+.ma-slider:after{
+    content: '.';
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translate(0, -1px);
+    background: @swatch-500;
+    height: 2px;
+    left:  @slider-know-selected-width;
+    right:  @slider-know-selected-width;
+}
+
+/**
+ *  MATERIAL SLIDER
+ *
+ *
+ */
+
+
+
+
+
+
+
+
+
+
+ /**
+ *  MATERIAL SWITCH BUTTON
+ *
+ *
+ */
+.ma-switch{
+    cursor: pointer;
+
+    position: relative;
+
+
+
+    > .knob{
+      background: #939393;
+      width: 38px;
+      position: absolute;
+      height: 14px;
+      top: 50%;
+      margin-top: -7px;
+
+      border-radius: 14px !important;
+      border: none;
+      z-index: 0;
+
+      > input{
+          visibility: collapse;
+          position: absolute;
+          width: 0px;
+          height: 0px;
+      }
+
+      > label{
+          position: absolute;
+          width: 20px ;
+          height: 20px;
+
+          top:-3px !important;
+          border-radius: 26px !important;
+          left: 0px;
+          top: 0;
+
+          z-index: 1;
+
+          background: white;
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33);
+
+      }
+    }
+}
+.ma-switch.disabled{
+    background: rgba(0, 0, 0, 0.12);
+
+    >label{
+        background: @grey-400 !important;
+    }
+}
+
+.ma-switch.checked{
+    //@blue-500: rgba(33, 150, 243, 1);
+    background: fade(@swatch-500, 20%) !important;
+}
+/**
+ *  MATERIAL SWITCH BUTTON
+ *
+ *
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /**
+  *  TEXT / LINE EDIT
+  *
+  *
+  */
+ .ma-line-edit{
+     /*
+     height: 48px;
+     */
+     padding-top: 8px;
+     padding-bottom: 8px;
+
+     line-height: 20px;
+
+     border:none;
+     border-bottom: @grey-400 solid 1px;
+     border-radius: 0;
+
+
+     box-shadow: none;
+
+
+     -webkit-transition: border-color 0.5s ease;
+        -moz-transition: border-color 0.5s ease;
+          -o-transition: border-color 0.5s ease;
+         -ms-transition: border-color 0.5s ease;
+             transition: border-color 0.5s ease;
+ }
+ .ma-line-edit:hover{
+     outline: none;
+     border:none;
+     border-bottom: @light-blue-700 solid 2px;
+     padding-bottom: 7px;
+
+     box-shadow: none;
+     border-color: @light-blue-700;
+ }
+ .ma-line-edit:focus{
+     outline: none;
+     box-shadow: none;
+ }
+ /**
+  *  TEXT / LINE EDIT
+  *
+  *
+  */
+
+
+
+
+
+
+
+
+
+ /**
+  *  TEXT / LINE EDIT
+  *
+  *
+  */
+
+.ma-floating-line-edit{
+  padding-top: 37px;
+  padding-bottom: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  > label{
+
+    position: absolute;
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+    color: @grey-900;
+  }
+
+
+  > input{
+    position: relative;
+    background: transparent;
+
+    padding-bottom: 8px;
+
+    font-size: 16px;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+
+
+    transition: 0.3s;
+  }
+
+
+  .focused{
+    margin-top: -24px;
+
+    transition: 0.3s;
+
+    font-size: 13px;
+    color: @light-blue-700;
+  }
+
+
+  > input:hover{
+       outline: none;
+       border:none;
+
+       box-shadow: none;
+       box-sizing: border-box;
+  }
+  > input:focus{
+       outline: none;
+       box-shadow: none;
+       border-bottom: @light-blue-700 solid 2px;
+  }
+  > input:not(:focus){
+       outline: none;
+       box-shadow: none;
+       border-bottom: transparent solid 2px;
+  }
+}
+
+/**
+ *  TEXT / LINE EDIT
+ *
+ *
+ */
