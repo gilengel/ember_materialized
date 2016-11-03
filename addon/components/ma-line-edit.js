@@ -10,7 +10,7 @@ export default Ember.Component.extend({
 
     let value = this.get('value');
     if(value !== "" || value !== undefined || value !== null){
-      this.set('classLabel', 'focused')
+      this.set('classLabel', 'focused');
     }
   },
 
@@ -21,24 +21,32 @@ export default Ember.Component.extend({
     input.keyup(function(e){ self.keyUp(e); });
   },
 
+  valueChange: Ember.observer('value', function(){
+    var value = this.get('value');
+    if(value === "" || value === undefined || value === null){
+      this.set('classLabel', '');
+    }else{
+      this.set('classLabel', 'focused');
+    }    
+  }),
+
   click: function(){
     var input = Ember.$(this.element).find('input');
     input.focus();
   },
 
-  focusIn: function(e){
-    this.set('classLabel', 'focused')
+  focusIn: function(){
+    this.set('classLabel', 'focused');
   },
 
-  focusOut: function(e){
+  focusOut: function(){
     var value = this.get('value');
     if(value === "" || value === undefined || value === null){
-      this.set('classLabel', '')
+      this.set('classLabel', '');
     }
   },
 
   keyUp: function(){
-    var value = this.get('value');
     var input = Ember.$(this.element).find('input');
     this.set('value', input.val());
   },
